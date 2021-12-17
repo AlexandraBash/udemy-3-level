@@ -85,4 +85,19 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 .then(json => console.log(json));
 
 
+  ///ФУНКЦИИ - ГЕНЕРАТОРЫ 
+
+  function* count(n){
+    for(let i = 0; i < n; i++){
+      yield i;
+    }
+  }
+  // const counter = count(7);
+  // console.log(counter.next().value);
+  // console.log(counter.next().value);
+  // console.log(counter.next().value);///нужно 7 раз прописать
+  for(let k of count(7)){
+    console.log(k);//раз прописать
+  }//более удобный способ
+
   
